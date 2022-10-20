@@ -1,3 +1,5 @@
+package br.com.excecoes.modelo;
+
 
 public class CadastroPessoa {
 	private String nome;

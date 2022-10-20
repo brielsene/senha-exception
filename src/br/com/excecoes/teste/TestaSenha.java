@@ -1,4 +1,11 @@
+package br.com.excecoes.teste;
+
+
 import java.util.Scanner;
+
+import br.com.excecoes.modelo.CadastroPessoa;
+import br.com.excecoes.modelo.SenhaInvalidaException;
+import br.com.excecoes.modelo.VerificaSenha;
 
 public class TestaSenha {
 
