@@ -1,11 +1,16 @@
 package br.com.excecoes.modelo;
 
-
+/**
+ * Classe cadastra pessoa
+ * @author Gabriel
+ *
+ */
 public class CadastroPessoa {
 	private String nome;
 	private int cpf;
 	private double saldo;
 	private int senha;
+	private int idade;
 	
 	public String getNome() {
 		return nome;
@@ -35,6 +40,11 @@ public class CadastroPessoa {
 		this.saldo += valor;
 	}
 	
+	/**
+	 * Classe saca 
+	 * @param valor
+	 * @throws SaldoInsuficienteException
+	 */
 	public void saca(double valor)throws SaldoInsuficienteException {
 		if(valor>this.saldo) {
 			throw new SaldoInsuficienteException("Saldo insuficiente "+ getSaldo()+ " Valor: "+valor);
@@ -50,6 +60,33 @@ public class CadastroPessoa {
 	
 	public void setSenha(int senha) {
 		this.senha = senha;
+	}
+	
+	public int getIdade() {
+		return idade;
+	}
+	
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	
+	public void VerificaIdade() {
+		
+		
+			if(this.idade == 0) {
+				throw new IdadeException("A idade não foi digitada");
+				
+			}else if(this.idade <18) {
+				throw new IdadeException("Acesso negado, menor de idade");
+				
+			}else {
+				System.out.println("Idade aceita");
+			}
+	
+		
+		
+		
+		
 	}
 
 }

@@ -13,7 +13,7 @@ public class TestaSenha {
 		Scanner leia = new Scanner(System.in);
 		CadastroPessoa cp = new CadastroPessoa();
 		int senha;
-		cp.setSenha(12);
+		cp.setSenha(123);
 		senha = cp.getSenha();
 		VerificaSenha vf = new VerificaSenha();
 		try {
